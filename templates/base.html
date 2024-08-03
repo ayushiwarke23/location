@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>{% block title %}Kamal classes{%endblock%}</title>
+		<style>
+			img { width: 500px; height: auto; }
+			* { font-size: 40px; }
+			body { background-color: #ccc; }
+			.nav { background-color: black; }
+			.nav a { color: white; text-decoration: none; margin: 40px; }
+		</style>
+	</head>
+	<body><center>
+	<div class="nav">
+		<a href="{% url 'daily' %}">Home</a>
+		<a href="{% url 'thane' %}">Thane</a>
+		<a href="{% url 'borivali' %}">Borivali</a>
+	</div>
+	{% block content %}
+	{% endblock %}
+	</body></center>
+</html>
